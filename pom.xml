@@ -12,13 +12,15 @@
     <description>MVC 1.0</description>
 
     <properties>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <arquillian-junit-container.version>1.4.0.Final</arquillian-junit-container.version>
-        <junit.version>4.12</junit.version>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <javax.servlet-jstl.version>1.2</javax.servlet-jstl.version>
+        <maven-war-plugin.version>3.1.0</maven-war-plugin.version>
+        <org.apache.tomee-javaee-api>8.0</org.apache.tomee-javaee-api>
         <tomee.version>8.0.0-SNAPSHOT</tomee.version>
         <version.deltaspike>1.9.0</version.deltaspike>
         <version.ozark>1.0.0-m04</version.ozark>
-        <maven-war-plugin.version>3.1.0</maven-war-plugin.version>
+        <junit.version>4.12</junit.version>
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
     </properties>
@@ -43,24 +45,8 @@
         <dependency>
             <groupId>org.apache.tomee</groupId>
             <artifactId>javaee-api</artifactId>
-            <version>8.0</version>
+            <version>${org.apache.tomee-javaee-api}</version>
             <scope>provided</scope>
-        </dependency>
-
-        <dependency>
-            <groupId>org.apache.deltaspike.modules</groupId>
-            <artifactId>deltaspike-data-module-api</artifactId>
-            <version>${version.deltaspike}</version>
-        </dependency>
-        <dependency>
-            <groupId>org.apache.deltaspike.modules</groupId>
-            <artifactId>deltaspike-data-module-impl</artifactId>
-            <version>${version.deltaspike}</version>
-        </dependency>
-        <dependency>
-            <groupId>org.apache.deltaspike.cdictrl</groupId>
-            <artifactId>deltaspike-cdictrl-api</artifactId>
-            <version>${version.deltaspike}</version>
         </dependency>
 
         <dependency>
@@ -73,11 +59,10 @@
             <artifactId>ozark-cxf</artifactId>
             <version>${version.ozark}</version>
         </dependency>
-
         <dependency>
             <groupId>javax.servlet</groupId>
             <artifactId>jstl</artifactId>
-            <version>1.2</version>
+            <version>${javax.servlet-jstl.version}</version>
         </dependency>
 
         <dependency>
